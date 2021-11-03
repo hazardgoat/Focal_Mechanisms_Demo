@@ -9,7 +9,7 @@ A comprehensive tutorial for plotting focal mechanism "beach-balls" using the Py
   (Resulting map of this demo)
 </p>
 
-
+# Background
 To better understand the faulting motions that create earthquakes, it can be useful to graphically display focal mechanisms. A [focal mechanism](https://www.usgs.gov/natural-hazards/earthquake-hazards/science/focal-mechanisms-or-beachballs?qt-science_center_objects=0#qt-science_center_objects) is the orientation and type of slip of a fault, and it is represented as a “beach-ball” symbol.
 
 
