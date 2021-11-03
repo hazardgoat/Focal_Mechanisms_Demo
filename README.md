@@ -1,10 +1,24 @@
 # Focal_Mechanisms_Demo
 A comprehensive tutorial for plotting focal mechanism "beach-balls" using the PyGMT package for Python.
 
+
+<p align="center">
+  <<img alt="" style=" margin-left: 50px;margin-right: 50px;" src="https://user-images.githubusercontent.com/74040471/140019294-a8dfb2f1-cb87-4a3b-b0b2-a0ca3b1f477a.png"/>
+</p>
+<p align="center">
+  (Resulting map of this demo)
+</p>
+
+
 To better understand the faulting motions that create earthquakes, it can be useful to graphically display focal mechanisms. A [focal mechanism](https://www.usgs.gov/natural-hazards/earthquake-hazards/science/focal-mechanisms-or-beachballs?qt-science_center_objects=0#qt-science_center_objects) is the orientation and type of slip of a fault, and it is represented as a “beach-ball” symbol.
 
-![image](https://user-images.githubusercontent.com/74040471/140017707-e316e092-9508-4c7a-b2c0-0e28d55c93da.png)
-(Imge is sourced from the United States Geological Survey earthquake hazards webpage on focal mechanisms)
+
+<p align="center">
+  <img alt="" style=" margin-left: 50px;margin-right: 50px;" src="https://user-images.githubusercontent.com/74040471/140017707-e316e092-9508-4c7a-b2c0-0e28d55c93da.png"/>
+</p>
+<p align="center">
+  (Image is sourced from the United States Geological Survey earthquake hazards webpage on focal mechanisms)
+</p>
 
 Within a “beach-ball,” the dark quarters represent compressional forces and the white quarters represent tensional forces. A “beach-ball” has two possible orientations of fault movement, each along with one of the planes dividing the “beach-ball” into fourths, and determining the correct orientation requires additional information. When “beach-balls” present four equally sized quadrants in a “top-down” view like the one in the above diagram, strike-slip faulting is represented. Rotated “beach-balls” with a white quarter in the center represent normal faulting, while “beach-balls” with a dark quarter in the center represent thrust faulting.
 
@@ -18,11 +32,14 @@ Please keep in mind that with the exception of the folder creation script, all c
 To follow this demo as written, project folders need to be created on the Desktop. A diagram of the desired directory tree for Windows 10 is shown below:
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74040471/140018003-6a7d41ee-61ca-4ad6-90d7-0aed64a324f3.png"/>
+  <img alt="" style=" margin-left: 50px;margin-right: 50px;" src="https://user-images.githubusercontent.com/74040471/140018003-6a7d41ee-61ca-4ad6-90d7-0aed64a324f3.png"/>
 </p>
-(Image created with Lucidchart)
+<p align="center">
+  (Image created with Lucidchart)
+</p>
 
 These folders can be created either by running the script provided below from anywhere after changing the `main_dir` file path to reflect your username or by manually creating a *Focal_Mechanism_Demo* folder and within it *Data*, *Methods*, and *Results* folders.
+
 ```
 '''
 Decription:
@@ -56,22 +73,30 @@ Data files used and created by the demo script will be located in the *Data* fol
 Focal mechanism data will be acquired by downloading it from the [SCEDC focal mechanism catalog](https://service.scedc.caltech.edu/eq-catalogs/FMsearch.php). This demo uses the following search parameters:
 
 **Date range:** 2019/01/01 to 2020/01/01
+
 **Magnitude range:** 5 to 10
+
 **Latitude range:** 35.5 to 36.1
+
 **Longitude range:** -118 to -117.15
+
 **Depth range:** -5 to 100
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74040471/140018516-129a42d3-cc39-4c8f-bd9e-307ab87b47ed.png"/>
+  <img alt="" style=" margin-left: 50px;margin-right: 50px;" src="https://user-images.githubusercontent.com/74040471/140018516-129a42d3-cc39-4c8f-bd9e-307ab87b47ed.png"/>
 </p>
-(Example of entering the focal mechanism parameters into the SCEDC focal mechanism catalog search)
+<p align="center">
+  (Example of entering the focal mechanism parameters into the SCEDC focal mechanism catalog search)
+</p>
 
 After clicking the search button, the results are presented as a text page. Select the data and column headers as shown below, and copy them into a text file. Then save the text file to the *Data* folder and name it **focal_mechanism_data**.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74040471/140018737-98fdabd6-1e43-40f0-b605-32546607ed38.png"/>
+  <img alt="" style=" margin-left: 50px;margin-right: 50px;" src="https://user-images.githubusercontent.com/74040471/140018737-98fdabd6-1e43-40f0-b605-32546607ed38.png"/>
 </p>
-(Example of selecting and copying the focal mechanism data and column headers)
+<p align="center">
+  (Example of selecting and copying the focal mechanism data and column headers)
+</p>
 
 # Creating The Project Files
 ### Conditioning The Focal Mechanism Data
@@ -446,7 +471,7 @@ The following demo script function plots focal mechanism “beach-balls” over 
 
 # Result
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74040471/140019294-a8dfb2f1-cb87-4a3b-b0b2-a0ca3b1f477a.png"/>
+  <img alt="" style=" margin-left: 50px;margin-right: 50px;" src="https://user-images.githubusercontent.com/74040471/140019294-a8dfb2f1-cb87-4a3b-b0b2-a0ca3b1f477a.png"/>
 </p>
 
 I hope that this has been helpful for anyone looking to plot and offset focal mechanisms with PyGMT.
