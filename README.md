@@ -20,10 +20,10 @@ To better understand the faulting motions that create earthquakes, it can be use
   (Image is sourced from the United States Geological Survey earthquake hazards webpage on focal mechanisms)
 </p>
 
-Within a “beach-ball,” the dark quarters represent compressional forces and the white quarters represent tensional forces. A “beach-ball” has two possible orientations of fault movement, each along with one of the planes dividing the “beach-ball” into fourths, and determining the correct orientation requires additional information. When “beach-balls” present four equally sized quadrants in a “top-down” view like the one in the above diagram, strike-slip faulting is represented. Rotated “beach-balls” with a white quarter in the center represent normal faulting, while “beach-balls” with a dark quarter in the center represent thrust faulting.
+Within a focal mechanism beach-ball, the dark quarters represent compressional forces and the white quarters represent tensional forces. A beach-ball has two possible orientations of fault movement, each along with one of the planes dividing the beach-ball into fourths, and determining the correct orientation requires additional information. When beach-balls present four equally sized quadrants in a “top-down” view like the one in the above diagram, strike-slip faulting is represented. Rotated beach-balls with a white quarter in the center represent normal faulting, while beach-balls with a dark quarter in the center represent thrust faulting.
 
 # The Demonstration
-In this demo, focal mechanism data will be retrieved from the [Southern California Earthquake Data Center (SCEDC)](https://scedc.caltech.edu/index.html) and then plotted as focal mechanism “beach-balls” on a map with the geospatial Python package [PyGMT](https://www.pygmt.org/latest/index.html).
+In this demo, focal mechanism data will be retrieved from the [Southern California Earthquake Data Center (SCEDC)](https://scedc.caltech.edu/index.html) and then plotted as focal mechanism beach-balls on a map with the geospatial Python package [PyGMT](https://www.pygmt.org/latest/index.html).
 
 Please keep in mind that with the exception of the folder creation script, all code blocks shown in this demo are intended to be run as part of a complete script, which is included at the bottom of the page.
 
@@ -142,9 +142,9 @@ The following demo script function removes the empty line and standardizes the d
 ```
 
 ### Filtering Focal Mechanism Data Into The “Aki” Format
-After conditioning the focal mechanism data, it needs to be filtered so that the resulting file can be read by the PyGMT [meca function](https://www.pygmt.org/dev/api/generated/pygmt.Figure.meca.html), which plots focal mechanism “beach-balls.” As the data provided by the SCEDC is in terms of strike, drip, rake, and magnitude, the focal mechanism “beach-balls” will be determined by way of the Aki and Richards (1980) convention. In this demo, earthquakes greater than or equal to M7.0 will be offset to showcase how offsetting is accomplished. The `meca` function requires a file to be passed directly to the `spec` parameter when offsetting, so a CSV file with specific columns and column order pertaining to the convention needs to be created. Additionally, the column headers must be removed, so that header names don’t plot as text.
+After conditioning the focal mechanism data, it needs to be filtered so that the resulting file can be read by the PyGMT [meca function](https://www.pygmt.org/dev/api/generated/pygmt.Figure.meca.html), which plots focal mechanism beach-balls. As the data provided by the SCEDC is in terms of strike, drip, rake, and magnitude, the focal mechanism beach-balls will be determined by way of the Aki and Richards (1980) convention. In this demo, earthquakes greater than or equal to M7.0 will be offset to showcase how offsetting is accomplished. The `meca` function requires a file to be passed directly to the `spec` parameter when offsetting, so a CSV file with specific columns and column order pertaining to the convention needs to be created. Additionally, the column headers must be removed, so that header names don’t plot as text.
 
-The following demo script function splits the focal mechanism data into two data frames at M7.0 earthquakes, then converts the magnitudes so that they are exponentially scaled; this is how the “beach-balls” will be sized when they are plotted. Next, it adds offset coordinates and text label columns to the data frame of M7.0 and greater earthquakes so they will be offset from their point of origin when plotted. Finally, the two data frames are saved as CSV files:
+The following demo script function splits the focal mechanism data into two data frames at M7.0 earthquakes, then converts the magnitudes so that they are exponentially scaled; this is how the beach-balls will be sized when they are plotted. Next, it adds offset coordinates and text label columns to the data frame of M7.0 and greater earthquakes so they will be offset from their point of origin when plotted. Finally, the two data frames are saved as CSV files:
 
 ```
     # Creates a focal mechanism dataframe in the "aki" format from the focal mechanism data
@@ -217,7 +217,7 @@ The following demo script function splits the focal mechanism data into two data
 ```
 
 ### Creating The Legend
-When the focal mechanisms “beach-balls” are eventually plotted on a map, the size differences will need to be given context with a legend. For this kind of legend, the PyGMT [legend function](https://www.pygmt.org/dev/api/generated/pygmt.Figure.legend.html) needs to be passed a postscript file.
+When the focal mechanisms beach-balls are eventually plotted on a map, the size differences will need to be given context with a legend. For this kind of legend, the PyGMT [legend function](https://www.pygmt.org/dev/api/generated/pygmt.Figure.legend.html) needs to be passed a postscript file.
 
 The following demo script function creates a postscript file for the legend:
 
@@ -271,7 +271,7 @@ def Create_Legend(self, fm_mags):
 ### Building The Map
 Now that the focal mechanism data and legend have been properly prepared, it’s time to plot everything on a map.
 
-The following demo script function plots focal mechanism “beach-balls” over an [automatically downloaded 3 arc second Digital Elevation Model from the Shuttle Radar Topography Mission](https://gmt.soest.hawaii.edu/doc/latest/datasets.html). The “beach-balls” are scaled exponentially in size by the magnitude and colored by depth, with magnitude, and depth legends plotted along the map axes. An inset map displaying the study region relative to the greater region around it is plotted in the upper right corner of the map:
+The following demo script function plots focal mechanism beach-balls over an [automatically downloaded 3 arc second Digital Elevation Model from the Shuttle Radar Topography Mission](https://gmt.soest.hawaii.edu/doc/latest/datasets.html). The beach-balls are scaled exponentially in size by the magnitude and colored by depth, with magnitude, and depth legends plotted along the map axes. An inset map displaying the study region relative to the greater region around it is plotted in the upper right corner of the map:
 
 ```
     # Plots the map    
