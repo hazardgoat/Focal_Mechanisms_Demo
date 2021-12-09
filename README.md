@@ -6,7 +6,7 @@ A comprehensive tutorial for plotting focal mechanism "beach-balls" using the Py
   <img alt="" style=" margin-left: 50px;margin-right: 50px;" src="https://user-images.githubusercontent.com/74040471/140022974-1ee3211b-3399-4436-83ea-b57db9d45912.png"/>
 </p>
 <p align="center">
-  (Resulting map of this demo)
+  (Resulting plot of this demo)
 </p>
 
 # Background
